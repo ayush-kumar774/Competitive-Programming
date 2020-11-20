@@ -16,5 +16,6 @@ public class FloorNumber {
                                 System.out.println( ( ( (n - 2) / x )+ 2 ) )  ;
                         }
                 }
+                sc.close();
         }
 }

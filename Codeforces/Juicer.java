@@ -23,9 +23,6 @@ public class Juicer {
                         }
                 }
                 System.out.println(ans) ;
+                sc.close();
         }
-}package Competitive-Programming.Codeforces;
-
-public orclass Juicer {
-        
 }
