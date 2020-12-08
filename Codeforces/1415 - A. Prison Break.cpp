@@ -18,7 +18,7 @@ using namespace std;
 const int MAX_N = 1e5 + 1;
 const int MOD = 1e9 + 7;
 const int INF = 1e9;
-const ll LINF = 1e18;
+const int LINF = 1e18;
 
 string decimalToBinary(int n) 
 { 
