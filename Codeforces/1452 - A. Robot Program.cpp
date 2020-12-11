@@ -13,6 +13,9 @@ using namespace std;
 #define vectorInt vector<int>
 #define vectorStr vector<string>
 #define vectorDo vector<double>
+#define mpInt map<int , int>
+#define mpStr map<string, int>
+#define mpChar map<char, int>
 #define pb push_back
 const int MAX_N = 1e5 + 1;
 const int MOD = 1e9 + 7;
@@ -46,4 +49,3 @@ int32_t main()
         | /~~\ /~~\  |   |__|   ___|  |  |  |
         |___________________________________|
 */
-

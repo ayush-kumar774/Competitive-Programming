@@ -13,6 +13,9 @@ using namespace std;
 #define vectorInt vector<int>
 #define vectorStr vector<string>
 #define vectorDo vector<double>
+#define mpInt map<int , int>
+#define mpStr map<string, int>
+#define mpChar map<char, int>
 #define pb push_back
 const int MAX_N = 1e5 + 1;
 const int MOD = 1e9 + 7;
@@ -21,7 +24,18 @@ const int LINF = 1e18;
 
 void solve()
 {
-         
+        int n ;
+        cin >> n ;
+        int counter = 0 ;
+        if ( n == 1 ) cout << 0 << endl ;
+        else if ( n == 2 ) cout << 1 << endl ;
+        else if ( n == 3 ) cout << 2 << endl ;
+        else if ( n % 2 == 0) {
+                cout << 2 << endl ;
+        }
+        else {
+                cout << 3 << endl ;
+        }
 }
 
 int32_t main()
@@ -32,7 +46,7 @@ int32_t main()
         //#endif
         fast ;
         int testcases = 1 ;
-        // cin >> testcases ;
+        cin >> testcases ;
         while(testcases--)
         {
                 solve() ;
@@ -46,4 +60,3 @@ int32_t main()
         | /~~\ /~~\  |   |__|   ___|  |  |  |
         |___________________________________|
 */
-
