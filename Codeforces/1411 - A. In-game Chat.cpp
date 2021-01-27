@@ -23,38 +23,33 @@ void solve()
 {
         int n ;
         cin >> n ;
-        vectorInt v(n) ;
-        map <int, int> mp ;
-        for (int i = 0 ; i < n ; i++) {
-                cin >> v[i] ;
-                mp[v[i]]++ ;
-        }
-        int ans = 0 ;
-        for (auto x : mp) {
-                if (x.second == 1) {
-                        ans = x.first ;
+        string  s ;
+        cin >> s ;
+        int counter = 0 , ind = -1 ;
+        for(int i = sz(s) - 1 ; i >= 0 ; i--)
+        {
+                if (s[i] == ')') counter++ ;
+                else 
+                {
+                        ind = i ;
                         break ;
                 }
         }
-        if (ans == 0) {
-                cout << -1 << endl ;
+        if(ind == -1) {
+                cout << "YES" << endl ;
         }
         else {
-                for (int i = 0 ; i < n ; i++) {
-                        if (v[i] == ans) {
-                                cout << i + 1 << endl ;
-                                break ;
-                        }
-                }
+                if (ind + 1 >= counter) cout << "NO" << endl ;
+                else cout << "YES" << endl ;
         }
 }
 
 int32_t main()
 {
-        #ifndef ONLINE_JUDGE
-	        freopen("input.txt", "r", stdin);
-	        freopen("output.txt", "w", stdout);
-        #endif
+        // #ifndef ONLINE_JUDGE
+	//         freopen("input.txt", "r", stdin);
+	//         freopen("output.txt", "w", stdout);
+        // #endif
         fast ;
         int testcases = 1 ;
         cin >> testcases ;
