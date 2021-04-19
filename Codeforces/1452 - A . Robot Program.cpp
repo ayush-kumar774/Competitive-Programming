@@ -24,13 +24,21 @@ const int LINF = 1e18;
 
 void solve()
 {
-        int n ;
-        cin >> n ;
-        cout << n << endl ;
-        for (int i = 1 ; i <= n ; i++) {
-                cout << i << " " ;
+        int x , y ;
+        cin >> x >> y ;
+        int ans = min(x, y) ;
+        ans *= 2 ;
+        x -= ans / 2 ;
+        y -= ans / 2  ;
+        if (x == y and y == 0) {
+                cout << ans << endl ;
         }
-        cout << endl ;
+        else if (x != 0) {
+                cout << ans + ( (x * 2) - 1) << endl ;
+        }
+        else if (y != 0) {
+                cout << ans + ( (y * 2) - 1) << endl ;
+        }
 }
 
 int32_t main()

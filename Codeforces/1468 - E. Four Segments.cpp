@@ -1,7 +1,7 @@
 // In the name of Aadi Shakti
 // We are nothing and you are everything
 // Jai Mata Di
- 
+
 #include <bits/stdc++.h>
 using namespace std;
 #define int long long
@@ -10,34 +10,26 @@ using namespace std;
 #define sz(v)	( (int) ( (v).size() ) )
 #define all(v)	( (v).begin() ) , ( (v).end() )
 #define allr(v)	( (v).rbegin() ) , ((v).rend())
-#define vectorInt vector<int>
-#define vectorStr vector<string>
-#define vectorDo vector<double>
-#define mpInt map<int , int>
-#define mpStr map<string, int>
-#define mpChar map<char, int>
-#define pb push_back
-const int MAX_N = 1e5 + 1;
-const int MOD = 1e9 + 7;
-const int INF = 1e9;
-const int LINF = 1e18;
+#define mod 1e9 + 7
+#define print(x) cout << x << endl ;
 
 void solve()
 {
-        int n ;
-        cin >> n ;
-        cout << n << endl ;
-        for (int i = 1 ; i <= n ; i++) {
-                cout << i << " " ;
+        int x ;
+        set<int> s ;
+        vector<int> points(4) ;
+        for (auto &x : points) {
+                cin >> x ;
         }
-        cout << endl ;
+        sort(points.begin(), points.end()) ;
+        cout << points[0] * points[2] << endl ;
 }
 
 int32_t main()
 {
         #ifndef ONLINE_JUDGE
-	       freopen("input.txt", "r", stdin);
-	       freopen("output.txt", "w", stdout);
+	        freopen("input.txt", "r", stdin);
+	        freopen("output.txt", "w", stdout);
         #endif
         fast ;
         int testcases = 1 ;
@@ -55,3 +47,4 @@ int32_t main()
         | /~~\ /~~\  |   |__|   ___|  |  |  |
         |___________________________________|
 */
+
