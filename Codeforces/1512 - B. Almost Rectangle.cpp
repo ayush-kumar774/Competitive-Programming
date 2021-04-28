@@ -59,35 +59,45 @@ void solve()
                 }
                 for (int i = 0 ; i < n ; i++) {
                         for (int j = 0 ; j < n ; j++) {
-                                cout << mat[i][j] << " " ;
+                                cout << mat[i][j];
                         }
                         cout << endl ;
                 }
         }
         else if (sameColumn) {
-                if (row[1] + 1 < n) {
+                if (column[1] + 1 < n) {
                         mat[row[0]][column[0] + 1] = '*' ;
                         mat[row[1]][column[1] + 1] = '*' ;
                 }
                 else {
-                        mat[row[0]][column[0] + 1] = '*' ;
-                        mat[row[1]][column[1] + 1] = '*' ;
+                        mat[row[0]][column[0] - 1] = '*' ;
+                        mat[row[1]][column[1] - 1] = '*' ;
                 }
                 for (int i = 0 ; i < n ; i++) {
                         for (int j = 0 ; j < n ; j++) {
-                                cout << mat[i][j] << " " ;
+                                cout << mat[i][j];
                         }
                         cout << endl ;
                 }
+        }
+        else {
+                mat[row[0]][column[1]] = '*' ;
+                mat[row[1]][column[0]] = '*' ;
+                for (int i = 0 ; i < n ; i++) {
+                        for (int j = 0 ; j < n ; j++) {
+                                cout << mat[i][j];
+                        }
+                        cout << endl ;
+                }        
         }
 }
 
 int32_t main()
 {
-        // #ifndef ONLINE_JUDGE
-	//         freopen("input.txt", "r", stdin);
-	//         freopen("output.txt", "w", stdout);
-        // #endif
+        #ifndef ONLINE_JUDGE
+	        freopen("input.txt", "r", stdin);
+	        freopen("output.txt", "w", stdout);
+        #endif
         fast ;
         int testcases = 1 ;
         cin >> testcases ;
