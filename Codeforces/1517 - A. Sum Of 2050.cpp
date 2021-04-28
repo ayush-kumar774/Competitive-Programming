@@ -22,10 +22,28 @@ const int MOD = 1e9 + 7;
 const int INF = 1e9;
 const int LINF = 1e18;
 
+int sumOfDigits(int n)
+{
+        int sum = 0 ;
+        while (n > 0)
+        {
+                sum += n % 10 ;
+                n /= 10 ;
+        }
+        
+        return sum ;
+} 
 
 void solve()
 {
-	
+	int n ;
+        cin >> n ;
+        if (n % 2050 != 0) {
+                cout << -1 << endl ;
+        } 
+        else {
+                cout << sumOfDigits(n / 2050) << endl ;
+        }
 }
 
 int32_t main()

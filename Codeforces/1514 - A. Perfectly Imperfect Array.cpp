@@ -25,7 +25,23 @@ const int LINF = 1e18;
 
 void solve()
 {
-	
+	bool perfectSquare = true ;
+        int n ;
+        cin >> n ;
+        while(n--) {
+                int x ;
+                cin >> x ;
+                int a = sqrt(x) ;
+                if (a * a != x) {
+                        perfectSquare = false ;
+                }
+        }
+        if (!perfectSquare) {
+                cout << "YES" << endl ;
+        }
+        else {
+                cout << "NO" << endl ;
+        }
 }
 
 int32_t main()

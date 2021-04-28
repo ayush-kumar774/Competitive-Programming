@@ -25,7 +25,31 @@ const int LINF = 1e18;
 
 void solve()
 {
-	
+	int n , k ;
+        cin >> n >> k ;
+        if ((n - 1 ) / 2 >= k) {
+                vector<int> v(n) ;
+                for (int i = 0 ; i < n ; i++) {
+                        v[i] = i + 1 ;
+                }
+                for (int i = 1 ; i < n ; i += 2) {
+                        if (i == n - 1) {
+                                break ;
+                        }
+                        if (k == 0) {
+                                break ;
+                        }
+                        swap(v[i] , v[i + 1]) ;
+                        k-- ;
+                }
+                for (auto x : v) {
+                        cout << x << " " ;
+                }
+                cout << endl ;
+        }
+        else {
+                cout << -1 << endl ;
+        }
 }
 
 int32_t main()
