@@ -11,7 +11,7 @@ public:
                 for (int i = 0 ; i < (int)height.size() - 1 ; i++)
                 {
                         maxxArea = max(maxxArea , min(height[i], height[(int)height.size() - 1]) * len) ;
-                        cout << maxxArea << endl ;
+                        // cout << maxxArea << endl ;
                         len-- ;
                 }
                 
